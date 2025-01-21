@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Hero Section */
+#hero-section {
+    background-image: url(../images/home/bg-hero.png);
+    background-position: center;
+    background-size: cover;
+    height: 900px; /* Tinggi layar penuh */
+    position: relative;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Paragraf pertama dengan ikon */
+#hero-section p:first-child {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-top: 150px !important;
+    width: max-content;
+
+
+}
+
+/* Heading utama */
+#hero-section h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* Subjudul */
+#hero-section p.subtitle {
+    color: white;
+    opacity: 0.8;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Link Groups */
+#hero-section .link-groups {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px; 
+}
+
+#hero-section .link-groups a {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s ease-in-out;
+}
+
+#hero-section .link-groups a:first-child {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+
+#hero-section .link-groups a:first-child:hover {
+    color: white;
+    background-color: transparent;
+}
+
+#hero-section .link-groups a:last-child {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+#hero-section .link-groups a:last-child:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Gambar Wayang */
+#hero-section .img-groups {
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px; /* Memastikan gambar berada di bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Memusatkan gambar secara horizontal */
+    width: 100%;
+    text-align: center;
+}
+
+#hero-section .img-groups img {
+    width: 30%;
+    height: auto; /* Menjaga rasio gambar */
+    opacity: 0.9; /* Memberi efek transparansi */
+}
+
+
+#section-featured p {
+    margin: 0 auto !important;
+    border: 1px solid black;
+    width: max-content;
+    padding: 6px 18px;
+    border-radius: 30px;
+}
+
+#section-featured h1 {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#section-featured h1 span {
+    background: linear-gradient(45deg, #083C4A, #EDB600);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#section-featured .container-fluid .row .col-lg-5 .left-column,
+#section-featured .container-fluid .row .col-lg-5 .right-column {
+    background-color: #F7F7F7;
+    height: max-content;
+    width: 80%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+#section-featured .container-fluid .row .col-lg-5 .left-column img,
+#section-featured .container-fluid .row .col-lg-5 .right-column img {
+    margin-bottom: 1rem !important;
+}
+
+#section-featured .container-fluid .row .col-lg-5 .left-column p,
+#section-featured .container-fluid .row .col-lg-5 .right-column p {
+    border: none;
+    width: 100%;
+    padding: 0 0 !important;
+    margin: 0 0 !important;
+    opacity: 50%;
+    color: black;
+    margin-bottom: 2rem !important;
+}
+
+
+#section-partner-bhumi h5 span {
+    color: #e6b800;
+}
+
+#galery-wayang {
+    background-color: #F7F7F7;
+}
+
+#galery-wayang .container-fluid p {
+    border: 1px solid black;
+    padding: 6px 20px !important;
+    width: max-content;
+    border-radius: 30px;
+    margin: 0 auto !important;
+    margin-bottom: 1rem !important;
+}
+
+#galery-wayang .container-fluid h4 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.slider-groups {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Menyembunyikan bagian luar dari container */
+}
+
+.carrousel {
+    display: flex;
+    gap: 20px;
+    /* Menambahkan jarak antar gambar */
+    overflow-x: auto;
+    /* Menambahkan kemampuan untuk scroll horizontal */
+    overscroll-behavior-x: contain;
+    /* Menjaga agar scroll tidak meluas ke luar */
+    scroll-snap-type: x mandatory;
+    /* Mengaktifkan fitur scroll-snap */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    /* Menyesuaikan ukuran gambar */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carrousel::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+#galery-wayang .container-fluid a.btn-primary {
+    background-color: #e6b800;
+    border: none;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+#galery-wayang .container-fluid a.btn-primary:hover {
+    transform: scale(0.9);
+}
+
+
+#section-faq {
+    background-color: #1a1a1a;
+}
+
+.title-faq {
+    border: 1px solid white;
+    width: max-content;
+    padding: 6px 20px !important;
+    color: white;
+    border-radius: 30px;
+}
+
+.section-faq .container-fluid .text-faq h1 {
+    width: max-content;
+    padding: 6px 20px !important;
+    color: white;
+    border-radius: 30px;
+}
+
+.section-faq .container-fluid .text-faq p:last-child {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.faq-container {
+    padding: 16px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.faq-item {
+    background-color: #EEEBE5;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question span {
+    color: black;
+}
+
+.faq-question:hover {
+    background-color: #EEEBE5;
+}
+
+.faq-answer {
+    padding: 15px;
+    padding-top: 0px;
+    border-top: 1px solid #EEEBE5;
+    display: none;
+}
+
+.faq-answer p {
+    color: black;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+.faq-contact {
+    width: 74%;
+    border: 1px solid #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faq-contact h5 {
+    font-size: 17px;
+}
+
+.faq-contact p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 80%;
+}
+
+
+.faq-contact a {
+    background-color: #ffcc00;
+    border: 2px solid #ffcc00;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq-contact a:hover {
+    background-color: transparent;
+    border: 2px solid #ffcc00;
+}

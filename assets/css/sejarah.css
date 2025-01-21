@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#sejarah-section-hero {
+    background-color: #202423;
+    height: 100vh;
+}
+
+#sejarah-section-hero .container-fluid img {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    /* Pastikan tidak ada jarak dari margin-top */
+    filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.6));
+}
+
+#find-sejarah-section {
+    padding: 40px;
+}
+
+#find-sejarah-section .container-fluid p {
+    border: 1px solid black;
+    padding: 6px 16px;
+    border-radius: 30px;
+}
+
+#find-sejarah-section .container-fluid h1 {
+    color: #202423;
+    font-weight: 700;
+    text-align: center;
+}
+
+#find-sejarah-section .container-fluid .btn-groups .btn-primary {
+    color: white;
+    background-color: #202423;
+    border: 1px solid #202423;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 30px;
+    padding: 8px 16px;
+    transition: 0.3s ease-in-out;
+}
+
+#find-sejarah-section .container-fluid .btn-groups .btn-primary:hover {
+    transform: scale(0.9);
+}
+
+#find-sejarah-section .container-fluid .btn-groups .btn-secondary {
+    color: #202423;
+    background-color: transparent;
+    border: 1px solid #202423;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 30px;
+    padding: 8px 30px;
+    transition: 0.3s ease-in-out;
+}
+
+#find-sejarah-section .container-fluid .btn-groups .btn-secondary:hover {
+    transform: scale(0.9);
+}
+
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-6 .column,
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-4 .column {
+    background-color: #F7F7F7;
+    padding: 24px;
+}
+
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-6 .column h4,
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-4 .columnh4 {
+    color: #333333;
+    margin-bottom: 1rem !important;
+    font-weight: 600;
+}
+
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-6 .column p,
+#find-sejarah-section .container-fluid .berita-groups .row .col-lg-4 .column p {
+    border: none;
+    color: #4D4D4D;
+    text-align: justify;
+}
+
+#perkembangan-wayang {
+    background-color: #202423;
+    height: max-content;
+    padding: 50px;
+}
+
+#perkembangan-wayang .container-fluid h1 {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+}
+
+.nav-tabs-container {
+    background-color: #202423;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-right: 10px;
+    font-size: 16px;
+    opacity: 80%;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: #fff;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    opacity: 100%;
+}
+
+#myTabContent{
+    margin-top: 4rem;
+}
+
+.tab-content-item {
+    color: #ccc;
+    background-color: #2a2e2d;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid white;
+    text-align: left;
+}
+
+.tab-content-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
