@@ -9,45 +9,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/ai.css">
 </head>
 
 <body>
     <header class="position-fixed fixed-top w-100 pt-2 pb-2">
-        <nav class="navbar navbar-expand-lg mx-5">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="row w-100 align-items-center">
-                    <!-- Kiri -->
-                    <div class="col-3">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
-                                class="d-inline-block align-text-top fw-bold">
-                            Bhumi Wayang
-                        </a>
+                <!-- Kiri: Logo -->
+                <a class="navbar-brand" href="#" id="navbar-brand">
+                    <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top fw-bold">
+                    <span id="navbar-text">Bhumi Wayang</span>
+                </a>
+
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Konten Navbar -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <!-- Tengah: Navigasi -->
+                    <div class="navbar-nav ms-3 mt-3 mt-lg-0 ms-lg-auto" id="nav-links">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="#">AI</a>
+                        <a class="nav-link" href="sejarah.html">Sejarah</a>
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                        <a class="nav-link" href="support.html">Bantuan</a>
                     </div>
 
-                    <!-- Tengah -->
-                    <div class="col-6">
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                                <a class="nav-link active" href="#">AI</a>
-                                <a class="nav-link" href="#">Sejarah</a>
-                                <a class="nav-link" href="#">Galeri</a>
-                                <a class="nav-link" href="#">Bantuan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kanan -->
-                    <div class="col-3">
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <button class="btn btn-primary">
-                                    Pilih Bahasa
-                                    <img src="assets/images/navbar/indonesia-flag.png" alt="indonesai flag">
-                                </button>
-                            </div>
+                    <!-- Kanan: Dropdown Bahasa -->
+                    <div class="navbar-nav ms-auto">
+                        <div class="dropdown mt-2 ms-3 mt-lg-0 ms-lg-auto">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pilih Bahasa
+                                <img src="assets/images/navbar/indonesia-flag.png" alt="indonesia flag" width="20"
+                                    class="ms-2">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('id', 'support')">
+                                        <img src="assets/images/navbar/indonesia-flag.png" alt="Indonesia" width="20"
+                                            class="me-2">
+                                        Indonesia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('en', 'support')">
+                                        <img src="assets/images/navbar/english-flag.png" alt="English" width="20"
+                                            class="me-2">
+                                        English
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -56,7 +77,7 @@
     </header>
 
     <main>
-        <section class="hero-section mx-5" id="hero-section">
+        <section class="hero-section mx-5 pb-5" id="hero-section">
             <div class="container-fluid">
                 <div class="col-10 mx-auto d-flex justify-content-center align-items-center flex-column">
                     <div class="title d-flex justify-content-center align-items-center">
@@ -73,7 +94,8 @@
                         class="btn-group-generate d-flex justify-content-between align-items-center bg-body-secondary mt-3">
                         <input type="text" placeholder="Masukkan cerita yang kamu inginkan..." id="generate-text"
                             required>
-                        <button class="btn btn-primary d-flex  justify-content-center align-items-center">
+                        <button class="btn btn-primary d-flex  justify-content-center align-items-center"
+                            id="generate-play">
                             <img src="assets/images/ai/play.png" alt="play icon" srcset="" class="me-1">
                             Generate
                         </button>
@@ -82,7 +104,7 @@
             </div>
         </section>
 
-        <section class="results-ai mx-5 pt-5" id="results-ai">
+        <section class="results-ai mx-5 pb-5 d-none" id="results-ai">
             <div class="container-fluid">
                 <h4 class="m-0 p-0 text-white mt-4 mb-lg-4">Results</h4>
                 <div class="row">
@@ -147,11 +169,125 @@
     </main>
 
     <footer>
+        <div class="container-fluid px-5">
+            <div class="row p-0 m-0">
+                <div class="col-12 col-md-4 col-lg-4 first-col p-0 mb-4 mb-md-0">
+                    <div class="image-content d-flex justify-content-start align-items-center text-center">
+                        <img src="assets/images/bhumi-icon.png" alt="" srcset="" />
+                        <h4 class="p-0 m-0 ms-2 title">Bhumi Wayang</h4>
+                    </div>
+                    <p class="subtitle p-0 m-0 mt-3">
+                        Merupakan Platform Belajar untuk kamu
+                        bisa mengenal lebih dalam seputar wayang.
+                    </p>
 
+                    <div class="social-media-group mt-4 mt-md-5 mb-3 mb-mb-5">
+                        <div class="row p-0 m-0">
+                            <div class="col-2 col-lg-2 p-0 google-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/google.png" alt="google icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 whatsapp-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/whatsapp.png" alt="whatsapp icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 instagram-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/instagram.png" alt="instagram icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 facebook-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/facebook.png" alt="facebook icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 col-lg-2 two-col p-0">
+                    <h4 class="p-0 m-0 title">Home</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Service</p>
+                        <p class="m-0 p-0 mt-2">FaQ</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 three-col p-0">
+                    <h4 class="p-0 m-0 title">AI</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Generate AI</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 four-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Sejarah</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Pengertian</p>
+                        <p class="m-0 p-0 mt-2">Galeri</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 five-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Bantuan</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Kontak</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr" />
+            <div class="copyright d-sm-flex justify-content-between align-content-center">
+                <p class="m-0 p-0">
+                    ©
+                    <span> Agritech Telkom </span>
+                    2025, All right reserved
+                </p>
+                <div class="href-group d-none d-sm-block">
+                    <a href="#" class="ms-sm-4">Home</a>
+                    <a href="#" class="ms-sm-4">AI</a>
+                    <a href="#" class="ms-sm-4">Sejarah</a>
+                    <a href="#" class="ms-sm-4">Galeri</a>
+                    <a href="#" class="ms-sm-4">Bantuan</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+<script>
+    const navbarText = document.getElementById('navbar-text');
+
+    const updateNavbar = () => {
+        const isMobile = window.innerWidth <= 991; // Periksa apakah lebar layar <= 768px
+        if (isMobile) {
+            if (navbarText) navbarText.style.display = "none"; // Sembunyikan teks pada mobile
+        } else {
+            if (navbarText) navbarText.style.display = "inline"; // Tampilkan teks pada desktop
+        }
+    };
+
+    // Jalankan saat halaman dimuat
+    updateNavbar();
+
+    // Tambahkan event listener untuk mendeteksi perubahan ukuran layar
+    window.addEventListener('resize', updateNavbar);
+</script>
+
+<script>
+    document.getElementById('generate-play').addEventListener('click', () => {
+        const resultsAi = document.getElementById('results-ai');
+        if (resultsAi) {
+            resultsAi.classList.remove('d-none');
+        }
+    });
+
+</script>
 
 </html>

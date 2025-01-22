@@ -46,7 +46,11 @@ body {
     font-size: 16px;
 }
 
-#section-galeri-wayang .container-fluid .tokoh-pandawa-class hr {
+#section-galeri-wayang .container-fluid .tokoh-pandawa-class hr,
+#section-galeri-wayang .container-fluid .tokoh-kurawa-class hr,
+#section-galeri-wayang .container-fluid .tokoh-rahmayana-class hr,
+#section-galeri-wayang .container-fluid .tokoh-punakawan-class hr,
+#section-galeri-wayang .container-fluid .tokoh-dewa-dewi-class hr {
     height: 3px;
     background-color: white;
 }
@@ -110,5 +114,70 @@ body {
 
 .carrousel::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #section-information .container-fluid .col-10 p {
+        width: 80%;
+    }
+
+    #section-information .container-fluid .col-10 p br {
+        display: none;
+    }
+
+    #section-information .container-fluid .col-10 {
+        background-image: url(../images/ai/hero-image.png);
+        width: 100%;
+        height: max-content;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    #section-information .container-fluid .col-10 p {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #section-information .container-fluid .col-10 p {
+        width: 80%;
+    }
+
+    #section-information .container-fluid .col-10 p br {
+        display: none;
+    }
+
+    #section-information .container-fluid .col-10 {
+        background-image: url(../images/ai/hero-image.png);
+        width: 100%;
+        height: max-content;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    #section-information .container-fluid .col-10 p {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    #section-information .container-fluid .col-10 p {
+        width: 80%;
+    }
+
+    #section-information .container-fluid .col-10 p br {
+        display: none;
+    }
+
+    #section-information .container-fluid .col-10 {
+        background-image: url(../images/ai/hero-image.png);
+        width: 100%;
+        height: max-content;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    #section-information .container-fluid .col-10 p {
+        width: 100%;
+    }
 }

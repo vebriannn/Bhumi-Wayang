@@ -9,45 +9,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/galeri.css">
 </head>
 
 <body>
     <header class="position-fixed fixed-top w-100 pt-2 pb-2">
-        <nav class="navbar navbar-expand-lg mx-5">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="row w-100 align-items-center">
-                    <!-- Kiri -->
-                    <div class="col-3">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
-                                class="d-inline-block align-text-top fw-bold">
-                            Bhumi Wayang
-                        </a>
+                <!-- Kiri: Logo -->
+                <a class="navbar-brand" href="#" id="navbar-brand">
+                    <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top fw-bold">
+                    <span id="navbar-text">Bhumi Wayang</span>
+                </a>
+
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Konten Navbar -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <!-- Tengah: Navigasi -->
+                    <div class="navbar-nav ms-3 mt-3 mt-lg-0 ms-lg-auto" id="nav-links">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="ai.html">AI</a>
+                        <a class="nav-link" href="sejarah.html">Sejarah</a>
+                        <a class="nav-link active" href="#">Galeri</a>
+                        <a class="nav-link" href="support.html">Bantuan</a>
                     </div>
 
-                    <!-- Tengah -->
-                    <div class="col-6">
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                                <a class="nav-link" href="#">AI</a>
-                                <a class="nav-link" href="#">Sejarah</a>
-                                <a class="nav-link active" href="#">Galeri</a>
-                                <a class="nav-link" href="#">Bantuan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kanan -->
-                    <div class="col-3">
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <button class="btn btn-primary">
-                                    Pilih Bahasa
-                                    <img src="assets/images/navbar/indonesia-flag.png" alt="indonesai flag">
-                                </button>
-                            </div>
+                    <!-- Kanan: Dropdown Bahasa -->
+                    <div class="navbar-nav ms-auto">
+                        <div class="dropdown mt-2 ms-3 mt-lg-0 ms-lg-auto">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pilih Bahasa
+                                <img src="assets/images/navbar/indonesia-flag.png" alt="indonesia flag" width="20"
+                                    class="ms-2">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('id')">
+                                        <img src="assets/images/navbar/indonesia-flag.png" alt="Indonesia" width="20"
+                                            class="me-2">
+                                        Indonesia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('en')">
+                                        <img src="assets/images/navbar/english-flag.png" alt="English" width="20"
+                                            class="me-2">
+                                        English
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -60,174 +81,283 @@
             <div class="container-fluid">
                 <div class="col-10 d-flex justify-content-center align-items-center flex-column">
                     <img src="assets/images/galeri/galeri-icon.png" alt="message icon" width="40px" height="40px">
-                    <h1 class="title m-0 p-0 mt-3">Galeri Wayang</h1>
-                    <p class="p-0 m-0 mt-3 text-center" id="hubungi kami">
+                    <h1 class="title m-0 p-0 mt-3" id="title-galeri">Galeri Wayang</h1>
+                    <p class="p-0 m-0 mt-3 text-center" id="hubungi-kami">
                         Kami menyediakan berbagai wayang dari cerita yang berbeda beda, <br>
                         Yuk Jelajahi Wayang-wayang yang ada di Indonesia!
                     </p>
                     <div
-                        class="groups-item d-flex justify-content-center align-content-center mt-4 gap-3 flex-wrap flex-md-nowrap gap-md-5">
+                        class="groups-item d-flex justify-content-center align-content-center mt-4 gap-3 flex-wrap flex-md-nowrap gap-lg-5 flex-column flex-lg-row">
                         <div class="time d-flex justify-content-center align-items-center">
                             <img src="assets/images/galeri/icon.png" alt="time icon">
-                            <p class="m-0 p-0 ms-2">20+ Koleksi Wayang</p>
+                            <p class="m-0 p-0 ms-2" id="total-koleksi">20+ Koleksi Wayang</p>
                         </div>
                         <div class="respon d-flex justify-content-center align-items-center">
                             <img src="assets/images/galeri/person.png" alt="bold icon">
-                            <p class="m-0 p-0 ms-2">10+ Cerita Wayang</p>
+                            <p class="m-0 p-0 ms-2" id="total-cerita">10+ Cerita Wayang</p>
                         </div>
                         <div class="respon d-flex justify-content-center align-items-center">
                             <img src="assets/images/galeri/paper.png" alt="sparkles icon">
-                            <p class="m-0 p-0 ms-2">50+ Jenis Wayang</p>
+                            <p class="m-0 p-0 ms-2" id="total-jenis">50+ Jenis Wayang</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-galeri-wayang mx-1 mx-lg-5 mt-5" id="section-galeri-wayang">
+        <section class="section-galeri-wayang mx-1 mx-lg-5 mt-5 pb-5" id="section-galeri-wayang">
             <div class="container-fluid">
                 <div class="tokoh-pandawa-class">
-                    <h5 class="m-0 p-0 text-white">Tokoh Pandawa</h5>
+                    <h5 class="m-0 p-0 text-white" id="figure-pandawa">Tokoh Pandawa</h5>
                     <hr>
                     <div class="slider-groups">
                         <div class="carrousel">
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Yudistira (Puntadewa)</div>
+                                <img src="assets/images/galeri/wayang/puntadewa.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Bima (Werkudara)</div>
+                                <img src="assets/images/galeri/wayang/werkudara.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Arjuna</div>
+                                <img src="assets/images/galeri/wayang/arjuna.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Nakula</div>
+                                <img src="assets/images/galeri/wayang/nakula.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
-                            </div>
-                            <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Sadewa</div>
+                                <img src="assets/images/galeri/wayang/sadewa.png" alt="Image 1">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tokoh-pandawa-class mt-5">
-                    <h5 class="m-0 p-0 text-white">Tokoh Kurawa</h5>
+                <div class="tokoh-kurawa-class mt-5">
+                    <h5 class="m-0 p-0 text-white" id="figure-kurawa">Tokoh Kurawa</h5>
                     <hr>
                     <div class="slider-groups">
                         <div class="carrousel">
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Duryudana (Suyudana)</div>
+                                <img src="assets/images/galeri/wayang/duryudana.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Dursasana</div>
+                                <img src="assets/images/galeri/wayang/dursasana.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Wikarna</div>
+                                <img src="assets/images/galeri/wayang/wikarna.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
-                            </div>
-                            <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
-                            </div>
-                            <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Citraksa</div>
+                                <img src="assets/images/galeri/wayang/citraksa.png" alt="Image 1">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tokoh-pandawa-class mt-5">
-                    <h5 class="m-0 p-0 text-white">Tokoh Punakawan</h5>
+                <div class="tokoh-rahmayana-class mt-5">
+                    <h5 class="m-0 p-0 text-white" id="figure-rahmayana">Tokoh Cerita Ramayana</h5>
                     <hr>
                     <div class="slider-groups">
                         <div class="carrousel">
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Rama & Shinta</div>
+                                <img src="assets/images/galeri/wayang/ramasinta.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Laksmana</div>
+                                <img src="assets/images/galeri/wayang/laksamana.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Hanoman</div>
+                                <img src="assets/images/galeri/wayang/hanoman.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Rahwana</div>
+                                <img src="assets/images/galeri/wayang/rahwana.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
-                            </div>
-                            <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Indrajit</div>
+                                <img src="assets/images/galeri/wayang/indrajit.png" alt="Image 1">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tokoh-pandawa-class mt-5">
-                    <h5 class="m-0 p-0 text-white">Tokoh Dewa Dewi</h5>
+                <div class="tokoh-punakawan-class mt-5">
+                    <h5 class="m-0 p-0 text-white" id="figure-punakawan">Tokoh Punakawan</h5>
                     <hr>
                     <div class="slider-groups">
                         <div class="carrousel">
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Semar</div>
+                                <img src="assets/images/galeri/wayang/semar.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Gareng</div>
+                                <img src="assets/images/galeri/wayang/gareng.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Petruk</div>
+                                <img src="assets/images/galeri/wayang/petruk.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Bagong</div>
+                                <img src="assets/images/galeri/wayang/bagong.png" alt="Image 1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tokoh-dewa-dewi-class mt-5">
+                    <h5 class="m-0 p-0 text-white" id="figure-dewa-dewi">Tokoh Dewa Dewi</h5>
+                    <hr>
+                    <div class="slider-groups">
+                        <div class="carrousel">
+                            <div class="card">
+                                <div class="card-title text-start">Indra (Dewa Petir)</div>
+                                <img src="assets/images/galeri/wayang/indra.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Wisnu (Dewa Pemelihara Alam Semesta)</div>
+                                <img src="assets/images/galeri/wayang/wisnu.png" alt="Image 1">
                             </div>
                             <div class="card">
-                                <div class="card-title text-start">Raden Pancanaka</div>
-                                <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                                <div class="card-title text-start">Brahma (Dewa Pencipta) </div>
+                                <img src="assets/images/galeri/wayang/brahma.png" alt="Image 1">
+                            </div>
+                            <div class="card">
+                                <div class="card-title text-start">Siwa (Dewa Pelebur)</div>
+                                <img src="assets/images/galeri/wayang/siwa.png" alt="Image 1">
+                            </div>
+                            <div class="card">
+                                <div class="card-title text-start">Durga (Dewa Perang)</div>
+                                <img src="assets/images/galeri/wayang/durga.png" alt="Image 1">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
+        <div class="container-fluid px-5">
+            <div class="row p-0 m-0">
+                <div class="col-12 col-md-4 col-lg-4 first-col p-0 mb-4 mb-md-0">
+                    <div class="image-content d-flex justify-content-start align-items-center text-center">
+                        <img src="assets/images/bhumi-icon.png" alt="" srcset="" />
+                        <h4 class="p-0 m-0 ms-2 title">Bhumi Wayang</h4>
+                    </div>
+                    <p class="subtitle p-0 m-0 mt-3" id="footer-subtitle">
+                        Merupakan Platform Belajar untuk kamu
+                        bisa mengenal lebih dalam seputar wayang.
+                    </p>
 
+                    <div class="social-media-group mt-4 mt-md-5 mb-3 mb-mb-5">
+                        <div class="row p-0 m-0">
+                            <div class="col-2 col-lg-2 p-0 google-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/google.png" alt="google icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 whatsapp-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/whatsapp.png" alt="whatsapp icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 instagram-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/instagram.png" alt="instagram icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 facebook-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/facebook.png" alt="facebook icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 col-lg-2 two-col p-0">
+                    <h4 class="p-0 m-0 title">Home</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Service</p>
+                        <p class="m-0 p-0 mt-2">FaQ</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 three-col p-0">
+                    <h4 class="p-0 m-0 title">AI</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Generate AI</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 four-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Sejarah</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Pengertian</p>
+                        <p class="m-0 p-0 mt-2">Galeri</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 five-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Bantuan</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Kontak</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr" />
+            <div class="copyright d-sm-flex justify-content-between align-content-center">
+                <p class="m-0 p-0">
+                    ©
+                    <span> Agritech Telkom </span>
+                    2025, All right reserved
+                </p>
+                <div class="href-group d-none d-sm-block">
+                    <a href="index.html" class="ms-sm-4" id="footer-home-title">Home</a>
+                    <a href="ai.html" class="ms-sm-4" id="footer-ai-title">AI</a>
+                    <a href="sejarah.html" class="ms-sm-4" id="footer-sejarah-title">Sejarah</a>
+                    <a href="galeri.html" class="ms-sm-4" id="footer-galery-title">Galeri</a>
+                    <a href="support.html" class="ms-sm-4" id="footer-bantuan-title">Bantuan</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+<script>
+    const navbarText = document.getElementById('navbar-text');
 
+    const updateNavbar = () => {
+        const isMobile = window.innerWidth <= 991; // Periksa apakah lebar layar <= 768px
+        if (isMobile) {
+            if (navbarText) navbarText.style.display = "none"; // Sembunyikan teks pada mobile
+        } else {
+            if (navbarText) navbarText.style.display = "inline"; // Tampilkan teks pada desktop
+        }
+    };
+
+    // Jalankan saat halaman dimuat
+    updateNavbar();
+
+    // Tambahkan event listener untuk mendeteksi perubahan ukuran layar
+    window.addEventListener('resize', updateNavbar);
+</script>
+<script src="assets/js/bahasa.js"></script>
 
 </html>

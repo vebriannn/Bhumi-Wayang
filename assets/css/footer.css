@@ -1,0 +1,98 @@
+/* footer */
+footer {
+    border-top: 1px solid white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #202423;
+}
+
+footer .container-fluid .row .first-col .image-content h4.title {
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+}
+
+footer .container-fluid .row .first-col p.subtitle {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 80%;
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.5;
+    width: 80%;
+}
+
+footer .container-fluid .first-col .social-media-group .row .col-lg-2 a.svg-link {
+    text-decoration: none;
+    background-color: #FFFFFF12;
+    padding: 8px 8px 10px 8px;
+    border-radius: 100%;
+    display: inline-flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .container-fluid .first-col .social-media-group .row .col-lg-2 a.svg-link:hover {
+    transform: translateY(-10px);
+}
+
+footer .container-fluid .first-col .social-media-group .row .col-lg-2 a.svg-link .responsive-img {
+    width: 24px;
+    height: 24px;
+}
+
+footer .container-fluid .two-col h4.title,
+footer .container-fluid .three-col h4.title,
+footer .container-fluid .four-col h4.title,
+footer .container-fluid .five-col h4.title {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+}
+
+footer .container-fluid .two-col .content p,
+footer .container-fluid .three-col .content p,
+footer .container-fluid .four-col .content p,
+footer .container-fluid .five-col .content p {
+    color: #fff;
+    opacity: 80%;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+.custom-hr {
+    border: none;
+    border-top: 2px solid #FFF;
+    opacity: 20%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+footer .container-fluid .copyright p {
+    color: #fff;
+    opacity: 80%;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+footer .container-fluid .copyright p span {
+    color: #EDB600;
+}
+
+footer .container-fluid .copyright .href-group a {
+    text-decoration: none;
+    color: #CFD0D5;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+footer .container-fluid .copyright .href-group a:hover {
+    text-decoration: underline;
+    color: #2196F3;
+}

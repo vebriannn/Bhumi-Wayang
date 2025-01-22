@@ -135,7 +135,7 @@
     opacity: 100%;
 }
 
-#myTabContent{
+#myTabContent {
     margin-top: 4rem;
 }
 
@@ -151,4 +151,109 @@
 .tab-content-item img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #sejarah-section-hero .container-fluid img {
+        width: 80%;
+    }
+
+    #sejarah-section-hero {
+        background-color: #202423;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    #find-sejarah-section {
+        margin-top: 80px;
+    }
+
+    #sejarah-section-hero .container-fluid img {
+        width: 100%;
+    }
+
+    #sejarah-section-hero {
+        background-color: #202423;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+
+    #find-sejarah-section {
+        margin-top: 40px;
+    }
+
+    #sejarah-section-hero .container-fluid img {
+        width: 100%;
+    }
+
+    #sejarah-section-hero .container-fluid img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+        filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.6));
+    }
+
+    #find-sejarah-section .container-fluid p img {
+        display: none;
+        text-align: center;
+    }
+
+    #find-sejarah-section .container-fluid h1 {
+        font-size: 28px;
+    }
+
+    #find-sejarah-section .container-fluid h1 br {
+        display: none;
+    }
+
+    #find-sejarah-section .container-fluid .btn-groups {
+        margin-top: 40px !important;
+    }
+
+    #perkembangan-wayang {
+        background-color: #202423;
+        height: max-content;
+        padding: 20px;
+    }
+
+    #perkembangan-wayang .container-fluid h1 {
+        font-size: 26px;
+    }
+
+    .nav-tabs {
+        margin-top: 40px;
+    }
+
+    .nav-tabs-container {
+        background-color: #202423;
+        border-radius: 8px;
+        padding: 0 !important;
+    }
+
+    #find-sejarah-section .container-fluid .btn-groups button {
+        margin: 0 auto !important;
+    }
+
+    #find-sejarah-section .container-fluid .btn-groups .btn-primary img {
+        display: none;
+    }
+
+    #sejarah-section-hero {
+        background-color: #202423;
+        height: 50vh;
+    }
+
+    #find-sejarah-section .container-fluid .btn-groups .btn-secondary {
+        margin-top: 14px !important;
+    }
 }

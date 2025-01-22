@@ -14,28 +14,32 @@ header {
     border-bottom: 1px solid rgb(105, 103, 103);
 }
 
-header nav .container-fluid div .col-3 a {
+header nav .container-fluid a {
+    color: white;
+    font-weight: 700;
+}
+header nav .container-fluid a:hover {
     color: white;
     font-weight: 700;
 }
 
-header nav .container-fluid div .col-3 a img {
-    margin-right: 6px;
-}
-
-header nav .container-fluid div .col-6 div div a {
+header nav .container-fluid .collapse .navbar-nav a {
     color: white;
     font-size: 16px;
     font-weight: 500;
     transition: 0.3s ease-in-out;
 }
 
-header nav .container-fluid div .col-6 div div a.active,
-header nav .container-fluid div .col-6 div div a:hover {
+header nav .container-fluid .collapse .navbar-nav a.active {
+    color: #F1B64C;
+    font-weight: 700;
+}
+
+header nav .container-fluid .collapse .navbar-nav a:hover {
     color: #F1B64C;
 }
 
-header nav .container-fluid div .col-3:last-child div div button {
+header nav .container-fluid .collapse .navbar-nav:last-child .dropdown button {
     background-color: transparent !important;
     border-color: white !important;
     border-radius: 30px;
@@ -43,3 +47,21 @@ header nav .container-fluid div .col-3:last-child div div button {
     font-size: 16px;
 }
 
+header nav .container-fluid .collapse .navbar-nav:last-child .dropdown ul {
+    background-color: #202423;
+}
+
+
+.navbar-toggler {
+    background-color: white;
+    border: 1px solid white;
+    /* Change the background color to white */
+}
+
+.navbar-toggler:hover {
+    background-color: white;
+    border: 1px solid white;
+    /* Change the background color to white */
+    box-shadow: none !important;
+    outline: none;
+}

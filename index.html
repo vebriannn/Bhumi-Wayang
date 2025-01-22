@@ -9,45 +9,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
     <header class="position-fixed fixed-top w-100 pt-2 pb-2">
-        <nav class="navbar navbar-expand-lg mx-5">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="row w-100 align-items-center">
-                    <!-- Kiri -->
-                    <div class="col-3">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
-                                class="d-inline-block align-text-top fw-bold">
-                            Bhumi Wayang
-                        </a>
+                <!-- Kiri: Logo -->
+                <a class="navbar-brand" href="#" id="navbar-brand">
+                    <img src="assets/images/bhumi-icon.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top fw-bold">
+                    <span id="navbar-text">Bhumi Wayang</span>
+                </a>
+
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Konten Navbar -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <!-- Tengah: Navigasi -->
+                    <div class="navbar-nav ms-3 mt-3 mt-lg-0 ms-lg-auto" id="nav-links">
+                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="ai.html">AI</a>
+                        <a class="nav-link" href="sejarah.html">Sejarah</a>
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                        <a class="nav-link" href="support.html">Bantuan</a>
                     </div>
 
-                    <!-- Tengah -->
-                    <div class="col-6">
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" href="#">Home</a>
-                                <a class="nav-link" href="#">AI</a>
-                                <a class="nav-link" href="#">Sejarah</a>
-                                <a class="nav-link" href="#">Galeri</a>
-                                <a class="nav-link" href="#">Bantuan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kanan -->
-                    <div class="col-3">
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <button class="btn btn-primary">
-                                    Pilih Bahasa
-                                    <img src="assets/images/navbar/indonesia-flag.png" alt="indonesai flag">
-                                </button>
-                            </div>
+                    <!-- Kanan: Dropdown Bahasa -->
+                    <div class="navbar-nav ms-auto">
+                        <div class="dropdown mt-2 ms-3 mt-lg-0 ms-lg-auto">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pilih Bahasa
+                                <img src="assets/images/navbar/indonesia-flag.png" alt="indonesia flag" width="20"
+                                    class="ms-2">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('id', 'support')">
+                                        <img src="assets/images/navbar/indonesia-flag.png" alt="Indonesia" width="20"
+                                            class="me-2">
+                                        Indonesia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"
+                                        onclick="changeLanguage('en', 'support')">
+                                        <img src="assets/images/navbar/english-flag.png" alt="English" width="20"
+                                            class="me-2">
+                                        English
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -84,8 +105,8 @@
                 <h1 class="text-center">Belajar Jadi <span>#LebihSeru</span><br>
                     Dengan Fitur Canggih</h1>
                 <div class="row mt-5 justify-content-around">
-                    <div class="col-lg-5 d-flex justify-content-center">
-                        <div class="left-column ms-auto">
+                    <div class="col-12 col-lg-5 d-flex justify-content-center">
+                        <div class="left-column ms-lg-auto">
                             <img src="assets/images/home/Icon-kuas.png" alt="">
                             <div class="groups d-flex justify-content-start align-items-center flex-column">
                                 <h4 class="fw-bold">Mainkan Imajinasimu!Ubah Cerita Jadi Wayang.</h4>
@@ -95,8 +116,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="right-column ">
+                    <div class="col-12 col-lg-5 mt-5 mt-lg-0">
+                        <div class="right-column mx-auto ">
                             <img src="assets/images/home/Icon-galery.png" alt="">
                             <div class="groups d-flex justify-content-start align-items-center flex-column">
                                 <h4 class="fw-bold">Jelajahi Wayang dari Berbagai Kisah</h4>
@@ -113,7 +134,7 @@
         <section class="section-partner-bhumi mt-5 pt-5 overflow-hidden" id="section-partner-bhumi">
             <div class="container-fluid mx-1 mx-lg-5">
                 <h5 class="text-center">Berikut merupakan <span>Partner</span> yang bekerja sama dengan kami</h5>
-                <div class="img-groups marquee d-flex justify-content-center align-items-center gap-5 mt-5">
+                <div class="img-groups flex-wrap d-flex justify-content-center align-items-center gap-5 mt-5">
                     <img src="assets/images/home/partner/img-1.png" alt="img 1">
                     <img src="assets/images/home/partner/img-2.png" alt="img 2">
                     <img src="assets/images/home/partner/img-3.png" alt="img 3">
@@ -127,35 +148,30 @@
             <div class="container-fluid d-flex justify-content-center flex-column mx-1 mx-lg-5 ">
                 <p class="m-0 p-0">Gallery & Documentation</p>
                 <h4 class="text-center">Galeri Wayang</h4>
-                <div class="slider-groups mt-4">
+                <div class="slider-groups">
                     <div class="carrousel">
                         <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                            <div class="card-title text-start">Yudistira (Puntadewa)</div>
+                            <img src="assets/images/galeri/wayang/puntadewa.png" alt="Image 1">
                         </div>
                         <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                            <div class="card-title text-start">Bima (Werkudara)</div>
+                            <img src="assets/images/galeri/wayang/werkudara.png" alt="Image 1">
                         </div>
                         <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                            <div class="card-title text-start">Arjuna</div>
+                            <img src="assets/images/galeri/wayang/arjuna.png" alt="Image 1">
                         </div>
                         <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                            <div class="card-title text-start">Nakula</div>
+                            <img src="assets/images/galeri/wayang/nakula.png" alt="Image 1">
                         </div>
                         <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
-                        </div>
-                        <div class="card">
-                            <div class="card-title text-start">Raden Pancanaka</div>
-                            <img src="assets/images/galeri/wayang/wayang.png" alt="Image 1">
+                            <div class="card-title text-start">Sadewa</div>
+                            <img src="assets/images/galeri/wayang/sadewa.png" alt="Image 1">
                         </div>
                     </div>
                 </div>
-
                 <a href="#" class="mt-4 btn btn-primary">
                     Jelajahi Wayang
                     <img src="assets/images/home/right-arrow.png" alt="">
@@ -164,14 +180,14 @@
         </section>
 
         <section class="section-faq mt-5 pt-5 overflow-hidden pb-5" id="section-faq">
-            <div class="container-fluid mx-1 mx-lg-5">
+            <div class="container-fluid mx-lg-5">
                 <div class="text-faq d-flex justify-content-center align-items-center flex-column">
                     <p class="m-0 p-0 title-faq">FAQ</p>
                     <h1 class="m-0 p-0 mt-2">Frequently Asked Questions</h1>
                     <p class="m-0 p-0">Berikut merupakan pertanyaan yang sering ditanyakan oleh pengguna</p>
                 </div>
                 <div class="faq-container mt-4">
-                    <div class="col-lg-7">
+                    <div class="col-10 col-lg-7 mx-auto mx-lg-0 mb-5 mb-lg-0">
                         <div class="faq-content">
                             <div class="faq-item">
                                 <div class="faq-question">
@@ -204,7 +220,8 @@
                                     <span>+</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Kunjungi halaman Bantuan, Deskripsikan bug secara rinci, termasuk langkah-langkah yang menyebabkan bug terjadi lalu kirim laporan.</p>
+                                    <p>Kunjungi halaman Bantuan, Deskripsikan bug secara rinci, termasuk langkah-langkah
+                                        yang menyebabkan bug terjadi lalu kirim laporan.</p>
                                 </div>
                             </div>
 
@@ -219,7 +236,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 d-flex justify-content-center ">
+                    <div class="col-10 col-lg-5 d-flex justify-content-center mx-auto mx-lg-0">
                         <div class="faq-contact">
                             <img src="assets/images/home/bintang-icon.png" alt="">
                             <h5 class="title text-start text-white mt-4">
@@ -235,10 +252,98 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
+        <div class="container-fluid px-5">
+            <div class="row p-0 m-0">
+                <div class="col-12 col-md-4 col-lg-4 first-col p-0 mb-4 mb-md-0">
+                    <div class="image-content d-flex justify-content-start align-items-center text-center">
+                        <img src="assets/images/bhumi-icon.png" alt="" srcset="" />
+                        <h4 class="p-0 m-0 ms-2 title">Bhumi Wayang</h4>
+                    </div>
+                    <p class="subtitle p-0 m-0 mt-3">
+                        Merupakan Platform Belajar untuk kamu
+                        bisa mengenal lebih dalam seputar wayang.
+                    </p>
 
+                    <div class="social-media-group mt-4 mt-md-5 mb-3 mb-mb-5">
+                        <div class="row p-0 m-0">
+                            <div class="col-2 col-lg-2 p-0 google-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/google.png" alt="google icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 whatsapp-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/whatsapp.png" alt="whatsapp icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 instagram-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/instagram.png" alt="instagram icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                            <div class="col-2 col-lg-2 p-0 facebook-link">
+                                <a href="#" class="svg-link">
+                                    <img src="assets/images/social-media/facebook.png" alt="facebook icon"
+                                        class="responsive-img" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 two-col p-0">
+                    <h4 class="p-0 m-0 title">Home</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Service</p>
+                        <p class="m-0 p-0 mt-2">FaQ</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 three-col p-0">
+                    <h4 class="p-0 m-0 title">AI</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Generate AI</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 four-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Sejarah</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Pengertian</p>
+                        <p class="m-0 p-0 mt-2">Galeri</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2 col-lg-2 five-col p-0  mb-md-0 mt-4 mt-lg-0">
+                    <h4 class="p-0 m-0 title">Bantuan</h4>
+                    <div class="content mt-3">
+                        <p class="m-0 p-0">Kontak</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr" />
+            <div class="copyright d-sm-flex justify-content-between align-content-center">
+                <p class="m-0 p-0">
+                    ©
+                    <span> Agritech Telkom </span>
+                    2025, All right reserved
+                </p>
+                <div class="href-group d-none d-sm-block">
+                    <a href="#" class="ms-sm-4">Home</a>
+                    <a href="#" class="ms-sm-4">AI</a>
+                    <a href="#" class="ms-sm-4">Sejarah</a>
+                    <a href="#" class="ms-sm-4">Galeri</a>
+                    <a href="#" class="ms-sm-4">Bantuan</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -254,5 +359,45 @@
         });
     });
 </script>
+<script>
+    const navbarText = document.getElementById('navbar-text');
+
+    const updateNavbar = () => {
+        const isMobile = window.innerWidth <= 991; // Periksa apakah lebar layar <= 768px
+        if (isMobile) {
+            if (navbarText) navbarText.style.display = "none"; // Sembunyikan teks pada mobile
+        } else {
+            if (navbarText) navbarText.style.display = "inline"; // Tampilkan teks pada desktop
+        }
+    };
+
+    // Jalankan saat halaman dimuat
+    updateNavbar();
+
+    // Tambahkan event listener untuk mendeteksi perubahan ukuran layar
+    window.addEventListener('resize', updateNavbar);
+</script>
+
+<script>
+    window.addEventListener('load', () => {
+        const audio = new Audio('assets/sound/gending.mp3'); // Pastikan path benar
+        audio.loop = true; // Supaya audio berulang
+        audio.muted = true; // Mulai dengan audio mute
+        audio.play()
+            .then(() => {
+                console.log('Audio berhasil diputar.');
+                // Lepaskan mute setelah beberapa waktu (opsional)
+                setTimeout(() => {
+                    audio.muted = false;
+                }, 2000); // Lepaskan mute setelah 2 detik
+            })
+            .catch(err => {
+                console.error('Gagal memutar audio:', err);
+            });
+    });
+
+
+</script>
+
 
 </html>

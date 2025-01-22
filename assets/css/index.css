@@ -15,7 +15,8 @@
     background-image: url(../images/home/bg-hero.png);
     background-position: center;
     background-size: cover;
-    height: 900px; /* Tinggi layar penuh */
+    height: 900px;
+    /* Tinggi layar penuh */
     position: relative;
     display: flex;
     text-align: center;
@@ -57,7 +58,7 @@
 #hero-section .link-groups {
     margin-top: 20px;
     display: flex;
-    gap: 16px; 
+    gap: 16px;
 }
 
 #hero-section .link-groups a {
@@ -94,17 +95,21 @@
 #hero-section .img-groups {
     position: absolute;
     bottom: 0;
-    margin-top: 10px; /* Memastikan gambar berada di bawah */
+    margin-top: 10px;
+    /* Memastikan gambar berada di bawah */
     left: 50%;
-    transform: translateX(-50%); /* Memusatkan gambar secara horizontal */
+    transform: translateX(-50%);
+    /* Memusatkan gambar secara horizontal */
     width: 100%;
     text-align: center;
 }
 
 #hero-section .img-groups img {
     width: 30%;
-    height: auto; /* Menjaga rasio gambar */
-    opacity: 0.9; /* Memberi efek transparansi */
+    height: auto;
+    /* Menjaga rasio gambar */
+    opacity: 0.9;
+    /* Memberi efek transparansi */
 }
 
 
@@ -363,4 +368,102 @@
 .faq-contact a:hover {
     background-color: transparent;
     border: 2px solid #ffcc00;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #hero-section .img-groups img {
+        width: 60%;
+        height: auto;
+        /* Menjaga rasio gambar */
+        opacity: 0.9;
+        /* Memberi efek transparansi */
+    }
+
+    .faq-contact {
+        width: 100%;
+        border: 1px solid #2c2c2c;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    #hero-section {
+        height: 780px;
+    }
+
+    #hero-section h1 {
+        color: white;
+        font-size: 26px;
+    }
+
+    #hero-section p:first-child {
+        font-size: 12px;
+    }
+
+    #hero-section p.subtitle {
+        font-size: 14px;
+    }
+
+    #hero-section p.subtitle br {
+        display: none;
+    }
+
+
+    #hero-section .link-groups a:first-child,
+    #hero-section .link-groups a:last-child {
+        font-size: 14px;
+    }
+
+    #hero-section .img-groups img {
+        width: 100%;
+        height: auto;
+        /* Menjaga rasio gambar */
+        opacity: 0.9;
+        /* Memberi efek transparansi */
+    }
+
+    #hero-section .img-groups {
+        position: absolute;
+        bottom: 0;
+        margin-top: 10px;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    .faq-contact {
+        width: 100%;
+        border: 1px solid #2c2c2c;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #hero-section h1 br {
+        display: none;
+    }
+
+    #section-featured h1 {
+        font-size: 28px;
+    }
+
+    .title-faq {
+        font-size: 14px;
+    }
+
+    .section-faq .container-fluid .text-faq h1 {
+        width: max-content;
+        color: white;
+        border-radius: 30px;
+        font-size: 24px;
+    }
+
+    .section-faq .container-fluid .text-faq p:last-child {
+        text-align: center;
+        font-size: 14px;
+
+    }
 }
